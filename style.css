@@ -1,0 +1,85 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f8f9fa;
+  overflow-x: hidden; 
+}
+
+main {
+  min-height: 70vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4e73df, #224abe);
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.footer {
+  background-color: #212529;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.photos-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.photos-flex .photo-item {
+  flex: 0 0 calc(25% - 0.75rem); 
+  box-sizing: border-box;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photos-flex .photo-item {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .photos-flex .photo-item {
+    flex: 0 0 100%;
+  }
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.photo-item img,
+.photos-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.photo-item img:hover,
+.photos-grid img:hover {
+  transform: scale(1.03);
+}
+
+.gallery-section {
+  margin-bottom: 3rem;
+}
